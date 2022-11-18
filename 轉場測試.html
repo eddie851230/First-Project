@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 包活動輪播 */
+.content{
+    position: relative;
+    width:70%;
+    height:350px;
+    margin: auto;
+}
+/* js讓其他活動頁照片被隱藏 */
+/* .mySlides {
+    display:none;
+} */
+/* 控制輪播所有照片 */
+.content img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    opacity:0.5 ;
+    /* object fit 用cover一定讓照片充滿100% */
+}
+
+/* ______按鈕_______ */
+/* 左右共同設定 */
+.content button{
+    background-color: transparent;
+    position: absolute;
+    color: white;
+    font-size:5em ;
+    top:100px;
+   
+}
+/* 左單獨設定 */
+.leftSlide{
+    
+    left: 20px ;
+}
+/* 右單獨設定 */
+.rightSlide{
+    
+    right:20px;
+}
+
+.enter{
+    display: block;
+}
+.enter-op{
+   opacity:1;
+}
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="content-back" id="maintext">
+        <div class="content">
+            <img id="myslide-id" class=" mySlides" src="../Img/event/event01.jpg" alt="">
+            <img id="myslide-id" class=" mySlides" src="../Img/event/event02.jpg" alt="">
+            <img id="myslide-id" class=" mySlides" src="../Img/event/event03.jpg" alt="">
+            <img id="myslide-id" class=" mySlides" src="../Img/event/event04.jpg" alt="">
+
+            <button class="leftSlide" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="rightSlide" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        // 木馬本身
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            // slowchange();
+            showDivs(slideIndex += 1);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            //x=[img1,img2,img3,img4]
+            // i  0    1    2    3 
+            //slideIndex  1    2    3    4
+            if (n > x.length) { slideIndex = 1 }//4-1
+            if (n < 1) { slideIndex = x.length }//1-4
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display='block';
+            console.log( x[slideIndex - 1]);
+                }
+        //轉場
+        // let 
+        function slowchange(e) {
+            this.classList.add('enter');
+            setTimeout(()=>{
+                this.classList.add('enter-op');
+            },150)
+        }
+
+        let turn=document.querySelectorAll('.content button');
+        // console.log(turn);
+        turn.forEach(button=>button.addEventListener('click', function(){
+            slowchange();
+            console.log(this);
+        }));
+    </script>
+</body>
+
+</html>

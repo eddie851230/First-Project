@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../Img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../css/event_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="../_js/jquery-3.6.0.js"></script>
+    <!-- 載入字體 -->
+
+    <!-- 載入cdn動畫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="../Home page.html" class="logo"><img src="/Img/MANGER LOGO_工作區域 1.png" alt=""></a>
+        <ul>
+            <li><a href="../Home page.html" class="active">回動態</a></li>
+            <li><a href="#">找餐廳</a></li>
+            <li><a href="#">來揪團</a></li>
+            <li><a href="#">我的會員</a></li>
+        </ul>
+    </header>
+
+    <!-- 置入 滾軸動圖 -->
+    <section>
+        <!-- <img src="../scrolling/sky.PNG" id="sky" alt=""> -->
+        <img src="../scrolling/rightM.PNG" id="rightM" alt="">
+        <img src="../scrolling/leftM.PNG" id="leftM" alt="">
+        <img src="../scrolling/noodle.PNG" id="noodle" alt="">
+        <h2 id="slogan">發現美食</h2>
+        <img src="../scrolling//guaBao.PNG" id="guaBao" alt="">
+        <img src="../scrolling/bubbleTea.PNG" id="bubbleTea" alt="">
+
+        <a href="#maintext" id="btn">即刻探索</a>
+
+    </section>
+    <img class="river-view" src="../scrolling/river.PNG" alt="">
+    <img id="baobao" src="../scrolling/bao.png" alt="">
+
+
+
+
+<!-- ______________________________________________ -->
+<!-- 活動輪播 -->
+    <div class="content-back" id="maintext">
+        <div class="content">
+            <img id="myslide-id" class=" mySlides" src="../Img/event/event01-01.jpg" alt="">
+            <img id="myslide-id" class=" mySlides" src="../Img/event/event02-01.jpg" alt="">
+            <img id="myslide-id" class=" mySlides" src="../Img/event/event03-01.jpg" alt="">
+            <img id="myslide-id" class=" mySlides" src="../Img/event/event04-01.jpg" alt="">
+
+            <button class="leftSlide" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="rightSlide" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+    </div>
+
+<!-- ______________________________________________ -->
+    <!-- 各活動商品列表 -->
+    <div class="w_limit">
+        <!--設定框度70% 水平置中-->
+        <!-- 各餐廳的活動tab -->
+        <div class="tab">
+            <button class="tablinks" onmouseover="openCity(event, 'nightmarket')">夜市祭</button>
+            <button class="tablinks" onmouseover="openCity(event, 'sweets')">甜點派對</button>
+            <button class="tablinks" onmouseover="openCity(event, 'drinks')">來杯飲品</button>
+            <button class="tablinks" onmouseover="openCity(event, 'korean')">韓食盛典</button>
+        </div>
+
+        <!-- 第一個活動:夜市 -->
+        <div id="nightmarket" class="tabcontent">
+            <div class="item_title" id="market">夜市祭</div>
+            <!-- 設定每個商品的資訊 -->
+            <!-- 商品01 -->
+            <div class="item">
+                <div><img src="../Img/item01.jpg"></div>
+                <p>地瓜球</p>
+                <p>原價:50</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品02 -->
+            <div class="item">
+                <div><img src="../Img/item02.jpg"></div>
+                <p>雞排</p>
+                <p>原價:90</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品03 -->
+            <div class="item">
+                <div><img src="../Img/item03.jpg"></div>
+                <p>甜不辣</p>
+                <p>原價:60</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品04 -->
+            <div class="item">
+                <div><img src="../Img/item04.jpg"></div>
+                <p>呱包</p>
+                <p>原價:50</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+        </div>
+        <!-- 第二個活動:甜點 -->
+        <div id="sweets" class="tabcontent">
+            <div class="item_title" id="dessert">甜點派對</div>
+            <!-- 商品01 -->
+            <div class="item">
+                <div><img src="../Img/food01.jpg"></div>
+                <p>地瓜球</p>
+                <p>原價:50</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品02 -->
+            <div class="item">
+                <div><img src="../Img/food03.jpg"></div>
+                <p>雞排</p>
+                <p>原價:90</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品03 -->
+            <div class="item">
+                <div><img src="../Img/food05.jpg"></div>
+                <p>甜不辣</p>
+                <p>原價:60</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品04 -->
+            <div class="item">
+                <div><img src="../Img/food07.jpg"></div>
+                <p>呱包</p>
+                <p>原價:50</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+        </div>
+        <!-- 第三個 -->
+        <div id="drinks" class="tabcontent">
+            <div class="item_title" id="manydrink">來杯飲品</div>
+            <!-- 商品01 -->
+            <div class="item">
+                <div><img src="../Img/food02.jpg"></div>
+                <p>地瓜球</p>
+                <p>原價:50</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品02 -->
+            <div class="item">
+                <div><img src="../Img/food04.jpg"></div>
+                <p>雞排</p>
+                <p>原價:90</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品03 -->
+            <div class="item">
+                <div><img src="../Img/food06.jpg"></div>
+                <p>甜不辣</p>
+                <p>原價:60</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品04 -->
+            <div class="item">
+                <div><img src="../Img/food08.jpg"></div>
+                <p>呱包</p>
+                <p>原價:50</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+        </div>
+        <!-- 第四個活動 -->
+        <div id="korean" class="tabcontent">
+            <div class="item_title" id="koreanFood">韓食盛典</div>
+            <!-- 商品01 -->
+            <div class="item">
+                <div><img src="../Img/food10.jpg"></div>
+                <p>地瓜球</p>
+                <p>原價:50</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品02 -->
+            <div class="item">
+                <div><img src="../Img/food11.jpg"></div>
+                <p>雞排</p>
+                <p>原價:90</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品03 -->
+            <div class="item">
+                <div><img src="../Img/food12.jpg"></div>
+                <p>甜不辣</p>
+                <p>原價:60</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+            <!-- 商品04 -->
+            <div class="item">
+                <div><img src="../Img/food13.jpg"></div>
+                <p>呱包</p>
+                <p>原價:50</p>
+                <input class="checkPrice" type="button" value="點擊看優惠">
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+        <!-- 抽獎機會~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <div class="drawing-back">
+            <p class="openbox-chance">今天還有<span>2</span>次打開機會</p>
+    
+            <div class="box-pack present">
+                <img class="box-style" src="../Img/draw.png" alt="">
+                <p>打開優惠</p>
+            </div>
+    
+            <div class="box-pack present">
+                <img class="box-style middleBox" src="../Img/draw.png" alt="">
+                <p>打開優惠</p>
+            </div>
+    
+            <div class="box-pack present">
+                <img class="box-style" src="../Img/draw.png" alt="">
+                <p>打開優惠</p>
+            </div>
+        </div>
+        <!-- 定義獎品 -->
+        <!-- <div class="gift gift-back">冬水堂6折券</div>
+        <div class="gift ">蛙城兩人同行一人免費</div>
+        <div class="gift ">月巴克咖啡壹千元提貨券</div>
+        <div class="gift">買噹噹二千元提貨卡</div>
+        <div id="showwhat"></div> -->
+    
+    
+        <!-- 禮物 點擊視窗會打開
+        第二次點擊會直接改 span的內容-->
+        <!-- 禮券項目名稱直接寫在js陣列 -->
+        <div class="gift fullPrizePage">
+            <div class="innerBgColor">
+                <div class="voucher">
+                    <img class="POPIcon" src="../Img/win.png">
+                    <span class="prizeName"></span>
+                    <img class="enterPic" src="../Img/input.png" alt="">
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <!-- 超過數量畫面 -->
+        <div class="overBG" id="showNo">
+            <div class="overtimesBG">
+    
+                <div class="voidBG">
+                    <img class="POPIcon" src="../Img/overtimes.png">
+                    <span class="overtimesText">已經超過抽獎次數囉!</span>
+                </div>
+            </div>
+        </div>
+
+<!-- ----------------------------------------------------- -->
+    <!-- 底圖 -->
+    <!-- <img src="/scrolling/river.PNG" id="river" alt=""> -->
+
+
+
+<!-- 底板-------------------------------------------------- -->
+    <!-- footer -->
+    <footer class="bottomInfo">
+        <div class="footer-w">
+            <ul class="footer-text">
+                <span>貪吃版權所有、轉載必究 | Copyright © Manger </span>
+                <a href="">刊登廣告</a>
+                <a href="">授權服務</a>
+                <a href="">服務信箱</a>
+                <a href="">隱私權聲明</a>
+                <a href="">會員使用條款</a>
+                <a href="">使用說明</a>
+            </ul>
+
+        </div>
+    </footer>
+
+    <!-- ___________________________________________________________ -->
+    <!-- JS -->
+    <script>
+        let rightM = document.getElementById('rightM');
+        let leftM = document.getElementById('leftM');
+        let noodle = document.getElementById('noodle');
+        let slogan = document.getElementById('slogan');
+        let btn = document.getElementById('btn');
+        let guaBao = document.getElementById('guaBao');
+        let bubbleTea = document.getElementById('bubbleTea');
+        let river = document.getElementById('river');
+        let baobao = document.getElementById("baobao");
+        // 新增事件監聽
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            rightM.style.top = value * 0.25 + 'px';
+            leftM.style.top = value * 0.15 + 'px';
+            noodle.style.top = value * 0.3 + 'px';
+            bubbleTea.style.left = value * -0.3 + 'px';
+            guaBao.style.left = value * 0.5 + 'px';
+
+            slogan.style.marginRight = value * 2 + 'px';
+            baobao.style.left = value * 0.6 +'px';
+        })
+        //--點擊左右方向鍵----------------------------------------------------------- 
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += 1);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            //x=[img1,img2,img3,img4]
+            // i  0    1    2    3 
+            //slideIndex  1    2    3    4
+            if (n > x.length) { slideIndex = 1 }//4-1
+            if (n < 1) { slideIndex = x.length }//1-4
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+        // _________________________________________________________________
+        // 自動跑馬
+        var autoindex = 0;
+        carousel();
+
+        function carousel() {
+            let i;
+            let x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            autoindex++;
+            if (autoindex > x.length) { autoindex = 1 }
+            x[autoindex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+
+
+        // ______________________________________________________________
+        // 活動商品
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += "active";
+            console.log(cityName);
+        }
+
+
+        // ______________________________________________________________
+        // 抽獎的js
+        // 三個盒子分別有多個折價券
+        // 每次刷新頁面這些折價券會隨機分配給三個盒子
+
+        // 1.先為折價券的陣列定義(看有幾個class)
+ 
+        // 每一次刷新頁可以點擊兩次
+        // 第三次會跳出""今日抽獎次數已用完
+        
+
+        // 禮物名單(直接寫在js)
+        var allPrizes = ["冬水堂6折券", "蛙城兩人同行一人免費", "月巴克咖啡壹千元提貨券", "買噹噹二千元提貨卡","肯德鴨全家桶鴨兌換券"]
+        // 設定箱子陣列
+        const presentList = document.getElementsByClassName("present");
+        const presentOrder = Array.from(presentList).entries();
+        // 定義初始值
+        var clickedTimes = 0;
+
+        // 設定抽中的禮物到span
+        var nameOfPrize = document.querySelector(".prizeName");
+        console.log(nameOfPrize)
+
+        // 第一次與第二次抽禮拜打開畫面與關閉
+        $(".present").click(function (e) {
+            $(".fullPrizePage").css("display", "flex")
+            e.stopPropagation();
+        })
+        $(window).click(function (e) {
+            $(".fullPrizePage").css("display", "none")
+            e.stopPropagation();
+        })
+        // 關閉全頻用盡次數畫面
+
+        $(window).click(function(e){
+            $(".overBG").css("display","none")
+            e.stopPropagation();
+        })
+
+        // 點擊完的警示畫面
+        var showNo = document.getElementById("showNo");
+        let chancebox = document.querySelector(".openbox-chance span");
+        let chancetime = 2;
+
+        // console.log(chancetime)
+        // 點擊條件
+        for (let [index] of presentOrder) {
+            presentList[index].addEventListener("click", function () {
+                if (clickedTimes < 2) {
+                    var x = Math.floor(Math.random() * allPrizes.length);
+                    nameOfPrize.innerText = allPrizes[x];
+                    allPrizes.splice(x,1);
+                    // console.log( allPrizes);
+                    chancetime-=1;
+                    chancebox.innerText= chancetime;
+                    return clickedTimes += 1;
+
+                }
+                showNo.style.display = "flex";
+                return;
+            })
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

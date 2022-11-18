@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    .modal{
+        position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  align-self: center;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+    }
+  
+
+.btn-close{
+    float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+
+}
+  
+.show-modal{
+  opacity: 1;
+  display: block;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.trigger{
+    width: 33%;
+}
+
+.modal img{
+    width:70%;
+}
+  
+ </style>
+</head>
+
+
+
+
+<body>
+  <!-- Elements used for triggering modals to open -->
+<img src="./Img/food01.jpg" class="trigger">
+<img src="./Img/food02.jpg" class="trigger">
+<img src="./Img/food03.jpg" class="trigger">
+
+<!-- Elements used as modals -->
+<div class="modal">
+  <span class="btn-close">&times;</span>
+  <!-- Content -->
+  <img src="./Img/food01.jpg" alt="">
+</div>
+
+<div class="modal">
+  <span class="btn-close">&times;</span>
+  <!-- Content -->
+  <img src="./Img/food02.jpg" alt="">
+</div>
+
+<div class="modal">
+  <span class="btn-close">&times;</span>
+  <!-- Content -->
+  <img src="./Img/food03.jpg" alt="">
+</div>
+
+<script>
+    // Get each modal and close button
+const triggers = document.getElementsByClassName("trigger");
+const triggerArray = Array.from(triggers).entries();
+const modals = document.getElementsByClassName("modal");
+const closeButtons = document.getElementsByClassName("btn-close");
+
+// Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
+for (let [index, trigger] of triggerArray) {
+  
+  const toggleModal = () => {
+    modals[index].classList.toggle("show-modal");
+  };
+  trigger.addEventListener("click", toggleModal);
+  closeButtons[index].addEventListener("click", toggleModal);
+}
+</script>
+</body>
+</html>

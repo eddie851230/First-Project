@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./_js/jquery-3.6.0.js"></script>
+    <style>
+        /* _____抽獎___________________ */
+        .drawing-back {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 80px;
+            text-align: center;
+            width: 70%;
+            margin: auto;
+            height: 400px;
+            background-color: rgb(246, 215, 215);
+            border-radius: 125px;
+            margin-top: 50px;
+            /* position: relative; */
+        }
+
+        /* 盒子照片的class */
+        .box-style {
+            width: 170px;
+
+            display: inline-block;
+            animation-name: upAnimation;
+        }
+
+        .middleBox {
+            margin-left: 0 200px 0 200px;
+        }
+
+        .box-style:hover {
+            transform-origin: center bottom;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-delay: 0.5s;
+        }
+
+        /* 動畫效果 */
+        @keyframes upAnimation {
+            0% {
+                transform: rotate(0deg);
+                transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+            }
+
+            10% {
+                transform: rotate(-12deg);
+                transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+            }
+
+            20% {
+                transform: rotate(12deg);
+                transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+            }
+
+            28% {
+                transform: rotate(-10deg);
+                transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+            }
+
+            36% {
+                transform: rotate(10deg);
+                transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
+            }
+
+            42% {
+                transform: rotate(-8deg);
+                transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
+            }
+
+            48% {
+                transform: rotate(8deg);
+                transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
+            }
+
+            52% {
+                transform: rotate(-4deg);
+                transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
+            }
+
+            56% {
+                transform: rotate(4deg);
+                transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
+            }
+
+            60% {
+                transform: rotate(0deg);
+                transition-timing-function: cubic-bezier(0.755, .5, .855, .06)
+            }
+
+            100% {
+                transform: rotate(0deg);
+                transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+            }
+        }
+
+        /* 包禮物跟字的 */
+        .box-pack {
+            /* position: absolute; */
+            /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+            width: 180px;
+            color: azure;
+            border: 3px solid white;
+            border-radius: 10px;
+            background-color: transparent;
+
+        }
+
+        .openbox-chance {
+            color: #f76d6d;
+            font-size: larger;
+            width: 100%;
+
+        }
+
+        .box-pack p {
+            padding: 10px;
+            color: #f76d6d;
+            font-size: 20px;
+        }
+
+        .bottomInfo {
+            margin-top: 100px;
+            width: 100vw;
+            background-color: #D3D3D3;
+
+
+            /* margin: 0px; */
+            padding: 0px;
+        }
+
+        .footer-w {
+            height: 200px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .footer-text {
+            /* text-align: center; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100%
+        }
+
+        .footer-text a {
+            margin-left: 15px;
+        }
+
+        /* 寫超過背景背景 */
+        .overBG {
+            z-index: 20000;
+            position: fixed;
+            overflow: auto;
+            height: 100vh;
+            width: 100vw;
+            /* opacity:0; */
+            background-color: rgba(0, 255, 255, 0);
+            /* 跨版廣告的對齊 */
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+            /* 搭配js 改成flex */
+            display: none;
+            align-items: center;
+        }
+
+        .overtimesBG {
+            text-align: center;
+
+
+            align-items: center;
+
+            line-height: 400px;
+            /* 邏輯：當 DIV 區塊的高度等同於文字行高的，文字就會被放在中間。 */
+
+            height: 400px;
+            width: 100vw;
+            background-color: rgba(50, 3, 10, 0.9);
+
+
+            /* overflow: auto; */
+
+        }
+
+        /* 抽中禮券的背景*/
+        .voucher {
+            background-color: #f7f0f1;
+            border-radius: 20;
+
+            height: 150px;
+            width: 60vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 20px;
+        }
+
+        /* 超過數量的背景 */
+        .voidBG {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* icon尺寸 */
+        .POPIcon{
+
+            width: 120px;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .enterPrize{
+            width:30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .overtimesText {
+            font-size: 30px;
+            color: rgb(245, 207, 207);
+
+        }
+
+        /* ______新增的css_______________________________ */
+        .fullPrizePage {
+            z-index: 20000;
+            position: fixed;
+            overflow: auto;
+            height: 100vh;
+            width: 100vw;
+            /* opacity:0; */
+            background-color: rgba(0, 255, 255, 0);
+            /* 跨版廣告的對齊 */
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            align-items: center;
+            /* 搭配js 改成flex */
+            display: none;
+
+        }
+
+        .innerBgColor {
+            display: flex;
+            text-align: center;
+
+
+            align-items: center;
+            justify-content: center;
+            line-height: 400px;
+            /* 邏輯：當 DIV 區塊的高度等同於文字行高的，文字就會被放在中間。 */
+
+            height: 400px;
+            width: 100vw;
+            background-color: rgba(255, 108, 130, 0.9);
+
+
+            /* overflow: auto; */
+
+        }
+
+        .prizeName {
+            font-size: 30px;
+            color: rgb(251, 81, 81);
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 抽獎機會~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div class="drawing-back">
+        <p class="openbox-chance">今天還有<span>2</span>次打開機會</p>
+
+        <div class="box-pack present">
+            <img class="box-style" src="../Img/draw.png" alt="">
+            <p>打開優惠</p>
+        </div>
+
+        <div class="box-pack present">
+            <img class="box-style middleBox" src="../Img/draw.png" alt="">
+            <p>打開優惠</p>
+        </div>
+
+        <div class="box-pack present">
+            <img class="box-style" src="../Img/draw.png" alt="">
+            <p>打開優惠</p>
+        </div>
+    </div>
+    <!-- 定義獎品 -->
+    <!-- <div class="gift gift-back">冬水堂6折券</div>
+    <div class="gift ">蛙城兩人同行一人免費</div>
+    <div class="gift ">月巴克咖啡壹千元提貨券</div>
+    <div class="gift">買噹噹二千元提貨卡</div>
+    <div id="showwhat"></div> -->
+
+
+    <!-- 禮物 點擊視窗會打開
+    第二次點擊會直接改 span的內容-->
+    <!-- 禮券項目名稱直接寫在js陣列 -->
+    <div class="gift fullPrizePage">
+        <div class="innerBgColor">
+            <div class="voucher">
+                <img class="POPIcon" src="../Img/win.png">
+                <span class="prizeName"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 超過數量畫面 -->
+    <div class="overBG" id="showNo">
+        <div class="overtimesBG">
+
+            <div class="voidBG">
+                <img class="POPIcon" src="../Img/overtimes.png">
+                <span class="overtimesText">已經超過抽獎次數囉!</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ______________________________________________________________
+        // 抽獎的寫法概念
+        // 三個盒子分別有三個對應的折價券
+        // 每次刷新頁面三張折價券會隨機分配給三個盒子
+
+        // 1.先為折價券的陣列定義(看有幾個class)
+
+        // 被人註解的 var x = Math.floor(Math.random() * giftlist.length);
+        // document.getElementById('get').innerText=giftlist[x].innerText;
+
+        // console.log(randomGet())
+        // 每一次刷新頁可以點擊兩次
+        // 第三次會跳出""今日抽獎次數已用完
+
+        // _________________________________________下面是舊的
+        // const giftlist = document.getElementsByClassName("gift");
+        // let showit = document.querySelector("#showwhat");
+
+        // // 把三個箱子寫成陣列
+        // const tryclick = document.getElementsByClassName("box-pack");
+        // const NewTryclick=Array.from(tryclick).entries();
+        // console.log(tryclick);
+        // var trynum = 0;
+
+        // // 用for of 去取NewTryClick 的""數值"""(非陣列)
+        // for(let [index] of NewTryclick){
+
+        //     tryclick[index].addEventListener("click", function () {
+        //         // 要求可以抽獎的次數
+        //         if (trynum < 2) {
+        //             var x = Math.floor(Math.random() * giftlist.length);
+        //             showit.innerText = giftlist[x].innerText;
+        //             // giftlist.splice(x, 1);
+        //             console.log(x)
+        //             return trynum += 1;
+        //         }
+        //         else {
+        //             showNo.style.display="flex";
+        //             // alert("一天只有兩次機會唷");
+        //             return;
+        //         }
+        //     })
+        //     // console.log(div);
+        // }
+        // _____________________________________
+        // 禮物名單
+        var allPrizes = ["冬水堂6折券", "蛙城兩人同行一人免費", "月巴克咖啡壹千元提貨券", "買噹噹二千元提貨卡"]
+        // 設定箱子陣列
+        const presentList = document.getElementsByClassName("present");
+        const presentOrder = Array.from(presentList).entries();
+        // 定義初始值
+        var clickedTimes = 0;
+
+        // 設定抽中的禮物到span
+        var nameOfPrize = document.querySelector(".prizeName");
+        console.log(nameOfPrize)
+
+        // 第一次與第二次抽禮拜打開畫面與關閉
+        $(".present").click(function (e) {
+            $(".fullPrizePage").css("display", "flex")
+            e.stopPropagation();
+        })
+        $(window).click(function (e) {
+            $(".fullPrizePage").css("display", "none")
+            e.stopPropagation();
+        })
+        // 關閉全頻用盡次數畫面
+
+        $(window).click(function(e){
+            $(".overBG").css("display","none")
+            e.stopPropagation();
+        })
+
+        // 點擊完的警示畫面
+        var showNo = document.getElementById("showNo");
+        let chancebox = document.querySelector(".openbox-chance span");
+        let chancetime = 2;
+
+        // console.log(chancetime)
+        // 點擊條件
+        for (let [index] of presentOrder) {
+            presentList[index].addEventListener("click", function () {
+                if (clickedTimes < 2) {
+                    var x = Math.floor(Math.random() * allPrizes.length);
+                    nameOfPrize.innerText = allPrizes[x];
+                    allPrizes.splice(x,1);
+                    // console.log( allPrizes);
+                    chancetime-=1;
+                    chancebox.innerText= chancetime;
+                    return clickedTimes += 1;
+
+                }
+                showNo.style.display = "flex";
+                return;
+            })
+        }
+
+
+
+    </script>
+</body>
+
+</html>

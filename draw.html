@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="gb2312">
+  <title>抽獎活動</title>
+  <style>
+*{
+ margin:0;padding:0;
+}
+#title{
+ color:red;text-align:center;margin:0 auto;width:240px;height:70px;padding-top:10px;background:opacity(0);
+}
+.btns{
+ width:190px;height:30px;margin:0px auto;
+}
+ 
+.btns span{
+ display:block;float:left;width:80px;height:28px;text-align:center;background:#036;color:#fff;cursor:pointer;border:1px solid #eee;border-radius:8px;font-family:"微軟雅黑";font-size:14px;line-height:28px;margin-right:10px;
+}
+#txt{
+ font-size:14px;color:#ccc999;text-align:center;margin:0 auto;width:190px;height:50px;padding-top:10px;
+}
+  </style>
+  <script>
+ var mytype=["iPhone6s","iPad Air2","DELL外星人","鍵鼠套裝","1000元超市購物卡","200元話費充值卡","謝謝參與","品牌耳機","港澳臺7日遊","50元優惠券"],//定義獎品池
+   timer=null,
+   count=0;
+//載入時觸發
+ window.onload=function(){
+ var start = document.getElementById("start");
+ var stop = document.getElementById("stop");
+ 
+ start.onclick=startFun;//這個函式後面加括號，就直接呼叫了該函式，所以不要加
+ stop.onclick=stopFun;
+ 
+ //繫結鍵盤事件
+ document.onkeyup=function(e){
+   e = e || window.event;
+  if(e.keyCode==13){
+    if(count==0){
+    startFun();
+    count=1;
+    }
+  else{  
+    stopFun();
+    count=0;
+    }
+  }
+ }
+ }
+ 
+//點選開始，標題欄開始輪動
+ function startFun(){
+  clearInterval(timer);//開始時，清除計時器，避免二次觸發
+  var title = document.getElementById("title");
+  var start = document.getElementById("start");
+ 
+  timer = setInterval(function(){
+    var num= Math.floor(Math.random()*mytype.length);
+    title.innerHTML=mytype[num];
+  },50);
+  start.style.background="#ccc";
+ 
+ }
+ //點選停止，標題欄停止輪動並輸出輪動結果
+ function stopFun(){
+  var start = document.getElementById("start"),
+    txt = document.getElementById("txt"),
+    title = document.getElementById("title");
+  clearInterval(timer);//清除計時器，停止計時器
+  start.style.background="#036";
+ }
+ 
+ 
+  </script>
+<body>
+ <div>
+ <h2 id="title">開始抽獎！</h2>
+ </div>
+ <div class="btns">
+ <span id="start">開始</span>
+ <span id="stop">停止</span>
+ </div>
+ <div id="txt">支援回車鍵(Enter)開始/停止。</div>
+</body>
+</html>
