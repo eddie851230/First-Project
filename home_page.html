@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eddie's first project</title>
+    <link rel="icon" type="image/x-icon" href="Img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./css/index_style.css">
+</head>
+<body>
+  
+
+    <!-- 彈出的聊天室窗 -->
+    <div class="talkRoom" id="talkRoom" onclick="show();">
+
+
+        <button id="cross">
+            <img id="crossicon" src="./Img/cross.png">
+        </button>
+
+
+        <!-- 第一位朋友聊天視窗 -->
+        <div class="frienddiv">
+            <!-- 包朋友資訊欄 -->
+            <div class="xx">
+                <!-- 大頭貼 -->
+                <div class="profilePic">
+                    <img src="./Img/profile/man01.jpg" alt="">
+                </div>
+
+                <!-- (上線狀態、明子、輸入狀態)-->
+                <div class="friendStatus">
+
+                    <div class="onlineName">
+                        <!-- 上線狀態+名子 -->
+
+                        <div class="online"></div>
+                        <h3>Henrique</h3>
+                    </div>
+
+                    <div class="friendtext">
+                        正在輸入中...
+                    </div>
+                </div>
+            </div>
+
+            <!-- 談話室窗 -->
+            <div class="talkbox">
+                <div class="friendText">
+                    <p>Henrique: 要不要吃這家?</p>
+
+                    <div class="friendsentPic"></div>
+                </div>
+
+                <div class="myText">
+                    <p>我: 好呀!!!!</p>
+                </div>
+
+                <input class="typing" type="text" placeholder="輸入" onfocus="flatback()">
+            </div>
+
+            <!-- 典籍輸入跳出的選項 -->
+            <div class="moreOptions">
+
+                <input id="btn01" type="button" value="揪團"></input>
+                <input id="btn02" type="button" value="訂餐"></input>
+                <input id="btn03" type="button" value="查餐廳"></input>
+                <input id="btn04" type="button" value="婉拒"></input>
+
+
+            </div>
+
+        </div>
+
+        <!-- 第二位朋友視窗 -->
+        <div class="frienddiv">
+            <div class="xx">
+                <!-- 大頭貼 -->
+                <div class="profilePic">
+                    <img src="./Img/profile/woman01.jpg" alt="">
+                </div>
+
+                <!-- (上線狀態、明子、輸入狀態)-->
+                <div class="friendStatus">
+
+                    <div class="onlineName">
+                        <!-- 上線狀態+名子 -->
+
+                        <div class="sobusy"></div>
+                        <h3>Christina</h3>
+                    </div>
+
+                    <div class="friendtext">
+                        忙碌中
+                    </div>
+                </div>
+            </div>
+
+            <!-- 談話室窗 -->
+            <div class="talkbox">
+                <div class="friendText">
+                    <p>Christina:這周要去哪裡吃?</p>
+
+                    <!-- <div class="friendsentPic"></div> -->
+                </div>
+
+                <div class="myText">
+                    <p>我: 我找一下~</p>
+                </div>
+
+                <input class="typing" type="text" value="" placeholder="輸入">
+            </div>
+
+            <div class="moreOptions">
+                <input id="btn03" type="button" value="查餐廳"></input>
+                <input id="btn01" type="button" value="揪團"></input>
+                <input id="btn02" type="button" value="訂餐"></input>
+                <input id="btn04" type="button" value="婉拒"></input>
+
+
+            </div>
+
+        </div>
+
+        <!-- 第三位朋友:下線 -->
+        <div class="frienddiv">
+            <div class="xx" id="offlinestyle">
+                <!-- 大頭貼 -->
+                <div class="profilePic">
+                    <img src="./Img/profile/man02.jpg" alt="">
+                </div>
+
+                <!-- (上線狀態、明子、輸入狀態)-->
+                <div class="friendStatus">
+
+                    <div class="onlineName">
+                        <!-- 上線狀態+名子 -->
+
+                        <div class="offline"></div>
+                        <h3>Jake</h3>
+                    </div>
+
+                    <div class="friendtext">
+                        前兩小時上線
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 第四位朋友:下線 -->
+        <div class="frienddiv">
+            <div class="xx" id="offlinestyle">
+                <!-- 大頭貼 -->
+                <div class="profilePic">
+                    <img src="./Img/profile/woman02.jpg" alt="">
+                </div>
+
+                <!-- (上線狀態、明子、輸入狀態)-->
+                <div class="friendStatus">
+
+                    <div class="onlineName">
+                        <!-- 上線狀態+名子 -->
+
+                        <div class="offline"></div>
+                        <h3>Joanna</h3>
+                    </div>
+
+                    <div class="friendtext">
+                        前1天上線
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 第五位:下線 -->
+        <div class="frienddiv">
+            <div class="xx" id="offlinestyle">
+                <!-- 大頭貼 -->
+                <div class="profilePic">
+                    <img src="./Img/profile/woman02.jpg" alt="">
+                </div>
+
+                <!-- (上線狀態、明子、輸入狀態)-->
+                <div class="friendStatus">
+
+                    <div class="onlineName">
+                        <!-- 上線狀態+名子 -->
+
+                        <div class="offline"></div>
+                        <h3>Joanna</h3>
+                    </div>
+
+                    <div class="friendtext">
+                        前1天上線
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 第六位:下線 -->
+        <div class="frienddiv">
+            <div class="xx" id="offlinestyle">
+                <!-- 大頭貼 -->
+                <div class="profilePic">
+                    <img src="./Img/profile/woman02.jpg" alt="">
+                </div>
+
+                <!-- (上線狀態、明子、輸入狀態)-->
+                <div class="friendStatus">
+
+                    <div class="onlineName">
+                        <!-- 上線狀態+名子 -->
+
+                        <div class="offline"></div>
+                        <h3>Joanna</h3>
+                    </div>
+
+                    <div class="friendtext">
+                        前1天上線
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- 主要內容 -->
+    <div class="container">
+      <!-- 標題選項 -->
+      <div class="header">
+          <div><img id="logo" src="./Img/MANGER LOGO_工作區域 1.png"></div>
+
+          <div class="searchBar">
+              <input id="typing" type="text" placeholder="輸入...">
+              <button><img id="iconSearch" src="./Img/SEARCH BAR_工作區域 1 複本.svg"></button>
+
+          </div>
+
+          <div class="iconMember">
+              <button id="memberLine">
+                  <img class="iconm" src="./Img/new member_icon_工作區域 1 複本 2.png">
+              </button>
+          </div>
+      </div>
+
+      <!-- 動態選項 -->
+      <div class="headerOption">
+          <div><button>
+                  <p>最新活動</p>
+              </button></div>
+          <div><button>
+                  <p>相揪開吃</p>
+              </button></div>
+          <div><button>
+                  <p>AI 推薦</p>
+              </button></div>
+          <div><button>
+                  <p>朋友動態</p>
+              </button></div>
+          <div><button>
+                  <p>餐廳名單</p>
+              </button></div>
+          <div><button>
+                  <p>嘎嘎嘎嘎</p>
+              </button></div>
+          <div><button>
+                  <p>嘎嘎嘎嘎</p>
+              </button></div>
+          <div><button>
+                  <p>嘎嘎嘎嘎</p>
+              </button></div>
+          <div><button>
+                  <p>嘎嘎嘎嘎</p>
+              </button></div>
+          <div><button>
+                  <p>嘎嘎嘎嘎</p>
+              </button></div>
+          <div><button>
+                  <p>嘎嘎嘎嘎</p>
+              </button></div>
+          <div><button>
+                  <p>嘎嘎嘎嘎</p>
+              </button></div>
+
+      </div>
+
+      <!-- 活動頁 -->
+      <div class="eventREC">
+          <!-- 活動框 -->
+          <a id="eventTitle" href="./sub_page/event.html">最新活動</a>
+
+      </div>
+
+      <!-- 主頁動態 -->
+      <div class="FPosts">
+
+          <!-- 欄位一 -->
+          <div id="col01">
+              <div class="food" id="f01">
+                  <!-- 給img設定一個id 做modal -->
+                  <!--  -->
+                  <img class="trigger" id="originalpic" src="./Img/food01.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+              </div>
+
+              <div class="food" id="f02">
+                  <img class="trigger" src="./Img/food02.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="f03">
+                  <img class="trigger" src="./Img/food03.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="f04">
+                  <img class="trigger" src="./Img/food04.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+              </div>
+
+
+              <div class="food" id="f06">
+                  <img class="trigger" src="./Img/food06.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+              </div>
+          </div>
+          <!-- 欄位二 -->
+          <div id="col02">
+              <div class="food" id="f07">
+                  <img class="trigger" src="./Img/food07.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="f08">
+                  <img class="trigger" src="./Img/food08.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="food09">
+                  <img class="trigger" src="./Img/food09.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="food10">
+                  <img class="trigger" src="./Img/food10.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="food11">
+                  <img class="trigger" src="./Img/food11.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="food12">
+                  <img class="trigger" src="./Img/food12.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+          </div>
+
+          <!-- 欄位三 -->
+          <div id="col03">
+              <div class="food" id="food13">
+                  <img class="trigger" src="./Img/food13.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="food14">
+                  <img class="trigger" src="./Img/food14.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="food15">
+                  <img class="trigger" src="./Img/food15.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="food16">
+                  <img class="trigger" src="./Img/food16.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+
+              </div>
+
+              <div class="food" id="food17">
+                  <img class="trigger" src="./Img/food17.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+              </div>
+              <!-- <div class="food" id="food18">
+                  <img class="trigger" src="./Img/food18.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+              </div> -->
+
+
+              <div class="food" id="food05">
+                  <img class="trigger" src="./Img/food05.jpg" alt="">
+                  <a href=""><img src="./Img/more_icon.png" alt=""></a>
+              </div> -->
+          </div>
+
+          <!-- ---------------- -->
+            <!-- 放大modal框 -->
+            <div class="modalwindow" id="zoommodal">
+
+              <!-- 關閉鍵 -->
+              <span class="closeBtn" id="closeicon">&times;</span>
+
+
+              <!-- 包放大圖與介紹div框 -->
+              <div class="introwindow">
+                  <!-- 放大的modal圖 -->
+                  <img class="zoompic" id="id-zoompic">
+
+                  <!-- 朋友介紹 -->
+                  <div class="introtext">
+                      <div class="Review">
+                          <img src="./Img/profile/woman01.jpg" alt="">
+
+                          <div>
+                              <div>Tina</div>
+                              <div>評價 五顆星</div>
+                          </div>
+
+                      </div>
+
+                      <div class="optionsArea">
+                          <a id="button01" href="./">查餐廳</a>
+                          <a id="button02" href="./">揪團</a>
+                          <a id="button03" href="./sub_page/event.html">查活動</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- ---------------------- -->
+
+
+
+
+
+
+
+      </div>
+
+      <!-- 頁尾 -->
+      <div class="footersec">
+          <Ul>
+              <a href="">關於Manger</a>
+              <a href="">加入Manger</a>
+              <a href="">各項服務</a>
+              <a href="">常見問題</a>
+              <a href="">聯絡我們</a>
+              <a href="">帳戶安全</a>
+
+          </Ul>
+
+          <div>
+              <p> @COPY RIGHT RESERVED</p>
+          </div>
+      </div>
+  </div>
+
+  <script src="./_js/index.js">
+  </script>
+</body>
+</html>
