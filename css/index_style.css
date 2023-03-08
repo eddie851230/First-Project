@@ -1,76 +1,70 @@
 /* 全部 */
 body {
-    margin: 0;
-    padding: 0;
-
+  margin: 0;
+  padding: 0;
 }
 
 /* 萬用 */
 * {
-    background-color: rgb(255, 169, 169);
-    /* border: 1px solid black; */
-
+  background-color: rgb(255, 169, 169);
+  /* border: 1px solid black; */
 }
 /* __________________________________________ */
-.welcome-modal{
-    width: 100vw;
-    height: 100vh;
-    display:flex;
-    position:fixed;
-    z-index: 30000;
+.welcome-modal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  z-index: 30000;
 }
 
 .myVideo {
-    object-fit: cover;
+  object-fit: cover;
 
-
-    position: relative;
-    width: 100vw;
-    height: 0;
-    padding-bottom: 56.25%;
+  position: relative;
+  width: 100vw;
+  height: 0;
+  padding-bottom: 56.25%;
 }
 
 .myVideo iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /* _____________________________________________ */
 .container {
-    margin: 0 auto;
-    width: 70vw;
-
+  margin: 0 auto;
+  width: 70vw;
 }
 
-.header{
-    padding-top: 30px;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header {
+  padding-top: 30px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-#logo:hover{
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    transition: background-color 1s ease-out;
-
+#logo:hover {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  transition: background-color 1s ease-out;
 }
 #logo {
-    width: 60px;
+  width: 60px;
 }
 .searchBar {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 200px;
-    background-color: rgb(218, 217, 217);
-    border-radius: 20px;
-    padding-left: 40px;
-    /* display: inline-block; */
-
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 200px;
+  background-color: rgb(218, 217, 217);
+  border-radius: 20px;
+  padding-left: 40px;
+  /* display: inline-block; */
 }
 
 /* 設定主頁的搜尋預設自 */
@@ -78,160 +72,145 @@ body {
     padding-left: 80px;
 } */
 
-
 #iconSearch {
-    float: right;
-    width: 30px;
-    padding-top: 5px;
-
+  float: right;
+  width: 30px;
+  padding-top: 5px;
 }
 
 p,
 img,
 button {
-    border: 0px;
-    background-color: transparent;
-    margin: 0pt;
+  border: 0px;
+  background-color: transparent;
+  margin: 0pt;
 }
 
 p {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 input {
-
-    padding-left: 15px;
-    border: 0px;
-    background-color: transparent;
-    outline: none;
+  padding-left: 15px;
+  border: 0px;
+  background-color: transparent;
+  outline: none;
 }
 
 .iconMember {
-    width: 40px;
-    height: 40px;
-
-
-
-
+  width: 40px;
+  height: 40px;
 }
 
 #memberLine {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .iconm {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* 改變預設字顏色 */
 ::placeholder {
-    color: #fb8383;
+  color: #fb8383;
 }
 
 .headerOption {
-    height: 100px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    white-space: nowrap
+  height: 100px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 
-.headerOption>div {
-
-    display: inline-block;
-
+.headerOption > div {
+  display: inline-block;
 }
 
-.headerOption>div>button {
-    background-color: transparent;
-    
-    color: rgb(255, 255, 255);
-    border: 2px solid #fb8383;
-    margin: 15px;
-    border-radius: 10px;
+.headerOption > div > button {
+  background-color: transparent;
+
+  color: rgb(255, 255, 255);
+  border: 2px solid #fb8383;
+  margin: 15px;
+  border-radius: 10px;
 }
 
-.headerOption>div>button>p {
-    padding: 10px 15px;
-    font-size: large;
+.headerOption > div > button > p {
+  padding: 10px 15px;
+  font-size: large;
 }
 
 /* 滾軸寬度 */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 /* 滾軸軌道 */
 ::-webkit-scrollbar-track {
-    visibility: hidden;
-    box-shadow: inset 0 0 5px #a87c7d;
-    border-radius: 5px;
+  visibility: hidden;
+  box-shadow: inset 0 0 5px #a87c7d;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track:hover {
-    visibility: visible;
+  visibility: visible;
 }
 
 /* 滾軸拉霸Handle */
 ::-webkit-scrollbar-thumb {
-
-    border-radius: 5px;
-    visibility: hidden;
+  border-radius: 5px;
+  visibility: hidden;
 }
 
 /* hover滾吧變色 */
 ::-webkit-scrollbar-thumb:hover {
-    background: #F4B1B2;
-    visibility: visible;
+  background: #f4b1b2;
+  visibility: visible;
 }
 
 /* 選項互動 */
-.headerOption>div>button:hover {
-
-    background-color: white;
-    color: rgb(241, 92, 92);
-    cursor: pointer;
-    transition: background-color 1s ease-out;
+.headerOption > div > button:hover {
+  background-color: white;
+  color: rgb(241, 92, 92);
+  cursor: pointer;
+  transition: background-color 1s ease-out;
 }
 
 /* 活動框 */
 .eventREC {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    margin: 30px 0px 30px 0px;
-    padding: 0px;
-    background: linear-gradient(90deg, #2FF2B5 0%, #A52FF2 50%, #3E5DF7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin: 30px 0px 30px 0px;
+  padding: 0px;
+  background: linear-gradient(90deg, #2ff2b5 0%, #a52ff2 50%, #3e5df7 100%);
 }
 
 #eventTitle {
-    background-color: transparent;
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
+  background-color: transparent;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
 }
 
-.eventREC>a:hover {
-    border: 2px solid white;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-
+.eventREC > a:hover {
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 /* --------------磚塊牆--------------------------- */
 .FPosts {
-    display: flex;
+  display: flex;
 
-
-    width: 100%;
-    justify-content: space-between;
-
-
+  width: 100%;
+  justify-content: space-between;
 }
 
 /* .FPost>div{
@@ -241,51 +220,42 @@ input {
 } */
 /* 設定照片磚塊div */
 .food {
-    width: 100%;
-    position: relative;
-    margin-bottom: 10px;
-
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
 }
 
-
 img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .food a {
-    background-color: transparent;
-    padding: 0%;
+  background-color: transparent;
+  padding: 0%;
 
-    position: absolute;
-    width: 20px;
+  position: absolute;
+  width: 20px;
 
-    bottom: 10px;
-    right: 10px;
-
-
+  bottom: 10px;
+  right: 10px;
 }
 
-.food>img {
-    cursor: pointer;
-    transition: 0.3s;
-
+.food > img {
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-
-.food>img:hover {
-    background-color: #190d0d;
-    opacity: 0.7;
-    cursor: pointer;
-    transition: 0.3s;
-
+.food > img:hover {
+  background-color: #190d0d;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-div[id^=col] {
-    width: 32%;
+div[id^="col"] {
+  width: 32%;
 }
-
-
 
 /* .food{
     position: relative;
@@ -298,547 +268,470 @@ div[id^=col] {
 } */
 /* -------------------------------------------------------- */
 
-
-
-
-
 /* 聊天室窗 */
 .talkRoom {
+  overflow: scroll;
+  scroll-behavior: smooth;
 
+  position: relative;
 
-    overflow: scroll;
-    scroll-behavior: smooth;
+  padding: 0 0 0 30px;
+  margin: 0px;
+  background-color: antiquewhite;
 
+  position: fixed;
 
-    position: relative;
+  width: 300px;
+  height: 100vh;
 
-    padding: 0 0 0 30px;
-    margin: 0px;
-    background-color: antiquewhite;
+  left: -300px;
 
-    position: fixed;
+  transition: ease-out 0.5s;
+  z-index: 999;
+  /* 最後要讓聊天窗偏右 */
 
-    width: 300px;
-    height: 100vh;
-
-    left: -300px;
-
-    transition: ease-out 0.5s;
-    z-index: 999;
-    /* 最後要讓聊天窗偏右 */
-
-    /* 第一個朋友聊天視窗 */
-    /* display: flex; */
-    /* justify-content: center; */
-
+  /* 第一個朋友聊天視窗 */
+  /* display: flex; */
+  /* justify-content: center; */
 }
-
-
 
 /* 收回視窗 */
 .talkRoom button {
+  float: right;
 
-    float: right;
-
-    background-color: transparent;
-    padding: 0px;
-    margin: 0px;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
 }
 
 /* 離開icon */
 #crossicon {
-    width: 20px;
+  width: 20px;
 }
-
 
 /* 包資料的父層 */
 .frienddiv {
-    margin-top: 8px;
-    width: 90%;
+  margin-top: 8px;
+  width: 90%;
 
-
-    background-color: transparent;
-    ;
-
+  background-color: transparent;
 }
 
 /* 讓聊天室窗會跑到上面的div */
-.frienddiv>.xx {
-    display: flex;
-    background-color: transparent;
-    ;
-
-    /* display: block ; */
+.frienddiv > .xx {
+  display: flex;
+  background-color: transparent;
+  /* display: block ; */
 }
-
 
 /* 塞頭貼的框 */
 .profilePic {
-    /* position: absolute; */
+  /* position: absolute; */
 
-    margin: 0px;
-    padding: 0px;
-    /* top: 0px; */
-    /* left: 10px; */
+  margin: 0px;
+  padding: 0px;
+  /* top: 0px; */
+  /* left: 10px; */
 
+  display: flex;
+  align-items: center;
 
-    display: flex;
-    align-items: center;
-
-
-    background-color: transparent;
+  background-color: transparent;
 }
-
-
 
 /* 頭貼 */
 .profilePic img {
-    width: 40px;
-    height: 40px;
-    /* v讓頭貼垂直置中對齊右邊狀態欄 */
-    /* display: flex; */
-    /* align-items: center ;沒有用 */
+  width: 40px;
+  height: 40px;
+  /* v讓頭貼垂直置中對齊右邊狀態欄 */
+  /* display: flex; */
+  /* align-items: center ;沒有用 */
 
-    /* 幫朋友頭貼照片+陰影 */
-    filter: drop-shadow(3px 5px 0px rgba(135, 4, 4, 0.7));
-
+  /* 幫朋友頭貼照片+陰影 */
+  filter: drop-shadow(3px 5px 0px rgba(135, 4, 4, 0.7));
 }
 
 /* 朋友上線狀態 */
 .friendStatus {
-    background-color: transparent;
-    margin-left: 10px;
-    width: 100%;
-    height: 60px;
-
-
-
+  background-color: transparent;
+  margin-left: 10px;
+  width: 100%;
+  height: 60px;
 }
-
 
 /* 包上線狀態跟大名 */
 /* 要設flex container */
 .onlineName {
-    display: flex;
-    background-color: transparent;
-
+  display: flex;
+  background-color: transparent;
 }
 
 /* 上線框框(水綠色) */
 .online {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 
-    padding: 0px;
-    margin: 0px;
-    background-color: #2FF2B5;
-    border-radius: 2px;
-
-
+  padding: 0px;
+  margin: 0px;
+  background-color: #2ff2b5;
+  border-radius: 2px;
 }
 
 /* 忙碌框框(水綠色) */
 .sobusy {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 
-    padding: 0px;
-    margin: 0px;
-    background-color: #f2832f;
-    border-radius: 2px;
-
-
+  padding: 0px;
+  margin: 0px;
+  background-color: #f2832f;
+  border-radius: 2px;
 }
 
 .offline {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 
-    padding: 0px;
-    margin: 0px;
-    background-color: #8a7a6e;
-    border-radius: 2px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #8a7a6e;
+  border-radius: 2px;
 }
 
 /* 大名 */
 .onlineName h3 {
-    padding: 0px;
-    margin: 0px;
-    font-size: 10px;
-    background-color: transparent;
-    ;
-
-
+  padding: 0px;
+  margin: 0px;
+  font-size: 10px;
+  background-color: transparent;
 }
 
 /* 朋友打字狀態 */
 .friendtext {
-    padding: 3px 3px;
-    margin: 0px;
+  padding: 3px 3px;
+  margin: 0px;
 
-    width: 100%;
-    border: 1px solid #fb8383;
-    border-radius: 3px;
+  width: 100%;
+  border: 1px solid #fb8383;
+  border-radius: 3px;
 
-    font-size: 10px;
+  font-size: 10px;
 
-    background-color: transparent;
-    ;
-
-
+  background-color: transparent;
 }
 
 .talk {
-    z-index: 100;
+  z-index: 100;
 }
 
 /* 設定聊天室窗內所有p 大小 */
 .talkbox p {
-    /* margin-top:5px ; */
-    font-size: 8px;
-
+  /* margin-top:5px ; */
+  font-size: 8px;
 }
-
 
 /* 朋友傳來的照片設定固定大小 */
 .friendsentPic {
-    margin-top: 5px;
+  margin-top: 5px;
 
-    margin-left: 10px;
+  margin-left: 10px;
 
-    width: 180px;
-    height: 140px;
+  width: 180px;
+  height: 140px;
 
-    background-image: url("../Img/food18.jpg");
-    background-size: cover;
-    border-radius: 15px;
+  background-image: url("../Img/food18.jpg");
+  background-size: cover;
+  border-radius: 15px;
 }
 
 /* 我已輸入的狀態 */
 .myText {
-    text-align: right;
+  text-align: right;
 
-    margin-right: 15px;
-
+  margin-right: 15px;
 }
 
 /* 包打字框的窗窗 */
 .xx {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* 取與moreOPTION的相對距離 */
 
-
-
 /*輸入欄位的設定 */
-.talkbox>input {
-    background-color: antiquewhite;
-    border: 1px solid #fb8383;
-    padding: 5px 0px;
-    margin: 0px;
-    width: 100%;
+.talkbox > input {
+  background-color: antiquewhite;
+  border: 1px solid #fb8383;
+  padding: 5px 0px;
+  margin: 0px;
+  width: 100%;
 }
 
-
-
-.talkbox>input::placeholder {
-    padding-left: 10px;
+.talkbox > input::placeholder {
+  padding-left: 10px;
 }
 
 .frienddiv {
-    position: relative;
-
+  position: relative;
 }
-
-
 
 /* 做聊天室的功能選項 */
 /* 設定每個按鈕的樣式 */
-.moreOptions>input {
-    padding: 8px 12px;
-    font-weight: bolder;
-    color: black;
-    border-radius: 6px;
-
+.moreOptions > input {
+  padding: 8px 12px;
+  font-weight: bolder;
+  color: black;
+  border-radius: 6px;
 }
 
 /* .moreOption>#01 */
 /* .moreOption:nth-of-type(1) */
 #btn01 {
-    background-color: #fb8383;
-    border: 1px solid white;
+  background-color: #fb8383;
+  border: 1px solid white;
 }
 
 #btn02 {
-    background-color: #2FF2B5;
-    border: 1px solid white;
-
+  background-color: #2ff2b5;
+  border: 1px solid white;
 }
 
 #btn03 {
-    background-color: white;
-    border: 1px solid #fb8383;
+  background-color: white;
+  border: 1px solid #fb8383;
 }
 
 #btn04 {
-    background-color: beige;
-    border: 1px solid #2FF2B5;
+  background-color: beige;
+  border: 1px solid #2ff2b5;
 }
 
 /* 離線的朋友再套上的灰色樣式 */
 #offlinestyle {
-    background-color: rgb(156, 149, 149);
-    border-radius: 10px;
-    padding: 10px 10px 0 0;
+  background-color: rgb(156, 149, 149);
+  border-radius: 10px;
+  padding: 10px 10px 0 0;
 }
 
 /* 頁尾 */
 .footersec {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 
 ul {
-    background-color: transparent;
-
+  background-color: transparent;
 }
 
 hr {
-    border: 2px solid lightgrey;
+  border: 2px solid lightgrey;
 }
 
 ul a {
-    background-color: transparent;
-    display: block;
-    line-height: 25px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color:#913333
+  background-color: transparent;
+  display: block;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #913333;
 }
-.footersec{
-    padding-top: 30px;
+.footersec {
+  padding-top: 30px;
 }
 .footersec div {
-    
-    background-color: transparent;
-    padding: 30px 20px;
-   
+  background-color: transparent;
+  padding: 30px 20px;
 }
-
-
-
 
 /* ---------設定modal------------------------------ */
 .modalwindow {
-    /* 置中 */
-    /* text-align:center; */
+  /* 置中 */
+  /* text-align:center; */
 
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(21, 21, 21, 0.8);
 
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    /* padding-top: 100px; */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(21, 21, 21, 0.8);
-
-    /* 讓照片與介紹對齊*/
-    justify-content: center;
-    align-items: center;
-    border: #A52FF2 1px solid;
+  /* 讓照片與介紹對齊*/
+  justify-content: center;
+  align-items: center;
+  border: #a52ff2 1px solid;
 }
 
 /* ------------------------------------------------- */
 
 /* 放大圖片的class */
 .zoompic {
-    /* margin:auto; */
-    /* display:inline-block ; */
-    justify-content: center;
-    width: 400px;
-
+  /* margin:auto; */
+  /* display:inline-block ; */
+  justify-content: center;
+  width: 400px;
 }
 
 /* 設定放大後要做展開，使用animation-name */
 .zoompic,
 .introwindow {
-    animation-name: makeItBig;
-    animation-duration: 0.8s;
-    /* height: 100vh; */
+  animation-name: makeItBig;
+  animation-duration: 0.8s;
+  /* height: 100vh; */
 }
 
 @keyframes makeItBig {
-    from {
-        transform: scale(0)
-    }
+  from {
+    transform: scale(0);
+  }
 
-    to {
-        transform: scale(1)
-    }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* 關閉鍵 */
 #closeicon {
-    /* 會抓modal框做相對位置 */
-    position: fixed;
-    top: 15px;
-    right: 35px;
-    /* 字行樣式 */
-    color: white;
+  /* 會抓modal框做相對位置 */
+  position: fixed;
+  top: 15px;
+  right: 35px;
+  /* 字行樣式 */
+  color: white;
 
-    font-size: 30px;
-    font-weight: bolder;
-    transition: 3s;
-    background-color: transparent;
-    z-index: 2000;
-
+  font-size: 30px;
+  font-weight: bolder;
+  transition: 3s;
+  background-color: transparent;
+  z-index: 2000;
 }
 
 /* 滑鼠滑到關閉的樣式 */
 .close:hover,
 .close:focus {
-    color: #fb8383;
-    text-decoration: none;
-    cursor: pointer;
+  color: #fb8383;
+  text-decoration: none;
+  cursor: pointer;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* 包 照片跟文字內容的div*/
 .introwindow {
-    /* height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 
+  /* display: flex; */
+  /* padding:auto ; */
 
-    /* display: flex; */
-    /* padding:auto ; */
-    
-    /* justify-content: center; */
-    /* align-items: center; */
-    background-color: transparent;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: transparent;
 }
 /* 照片 與  文字內容 */
-.zoompic, .introtext{
-    display: inline-block;
-    /* position: absolute; */
-    /* margin: auto */
-   
+.zoompic,
+.introtext {
+  display: inline-block;
+  /* position: absolute; */
+  /* margin: auto */
 }
 
 /* 食物照片介紹 */
 .introtext {
-    width: 300px;
-    padding: 15px;
-    background-color: white;
-    margin-left: 20px;
-    z-index: 1000;
-    border-radius: 8px;
-    /* width: 40%; */
-    /* min-width: 150px; */
-    position: relative;
-    
-
+  width: 300px;
+  padding: 15px;
+  background-color: white;
+  margin-left: 20px;
+  z-index: 1000;
+  border-radius: 8px;
+  /* width: 40%; */
+  /* min-width: 150px; */
+  position: relative;
 }
 /*  */
-.Review div{
-    display: inline;
+.Review div {
+  display: inline;
 }
-.Review, .Review div{
-    background-color:transparent ;
+.Review,
+.Review div {
+  background-color: transparent;
 }
 
 /* 放大的圖 */
-.Review>img {
-    width: 60px;
-    height: auto;
-    display: inline;
-
+.Review > img {
+  width: 60px;
+  height: auto;
+  display: inline;
 }
 
-.Review>span {
-    background-color: transparent;
-    color: rgb(88, 87, 87);
-    font-size: 600;
-
+.Review > span {
+  background-color: transparent;
+  color: rgb(88, 87, 87);
+  font-size: 600;
 }
 /* 照片的選項區 */
-.optionsArea{
-    
-
-    position:absolute;
-    bottom:0px ;
-    background-color: transparent;
-    width: 90%; 
-    display: block;
+.optionsArea {
+  position: absolute;
+  bottom: 0px;
+  background-color: transparent;
+  width: 90%;
+  display: block;
 }
 /* 選項樣式 */
-.optionsArea a{
-    display: block;
-    text-align: center;
-    width: 80px;
-    padding: 10px 20px;
-    margin:auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    
-
+.optionsArea a {
+  display: block;
+  text-align: center;
+  width: 80px;
+  padding: 10px 20px;
+  margin: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
-#button01{
-    background-color: #fb8383;
-    color: aliceblue;
-    text-decoration: none;
-    
+#button01 {
+  background-color: #fb8383;
+  color: aliceblue;
+  text-decoration: none;
 }
-#button01:hover{
-    background-color: white;
-    color: rgb(241, 92, 92);
-    cursor: pointer;
-    transition: background-color 1s ease-out;
+#button01:hover {
+  background-color: white;
+  color: rgb(241, 92, 92);
+  cursor: pointer;
+  transition: background-color 1s ease-out;
 }
-#button02{
-    background-color: #10ceae;
-    color: aliceblue;
-    text-decoration: none;   
+#button02 {
+  background-color: #10ceae;
+  color: aliceblue;
+  text-decoration: none;
 }
-#button02:hover{
-    background-color: white;
-    color: #10ceae;
-    cursor: pointer;
-    transition: background-color 1s ease-out;
+#button02:hover {
+  background-color: white;
+  color: #10ceae;
+  cursor: pointer;
+  transition: background-color 1s ease-out;
 }
-#button03{
-    background-color: #fbf7f7;
-    color: #fb8383;
-    text-decoration: none;
-    border:1px solid #fb8383;
-    
+#button03 {
+  background-color: #fbf7f7;
+  color: #fb8383;
+  text-decoration: none;
+  border: 1px solid #fb8383;
 }
-#button03:hover{
-    background-color: #fb8383;
-    color: #f4f4f4;
-    cursor: pointer;
-    transition: background-color 1s ease-out;
-    border:1px solid #f4f4f4;
+#button03:hover {
+  background-color: #fb8383;
+  color: #f4f4f4;
+  cursor: pointer;
+  transition: background-color 1s ease-out;
+  border: 1px solid #f4f4f4;
 }
 
 /* js函式點擊後加入show-modal */
-/* .show-modal{
-    opacity: 1;
-  display: block;
-  transform: scale(1.0);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-} */
-/* test */
 .show-modal {
-    opacity: 1;
-    display: flex;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  opacity: 1;
+  display: flex;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 /* 典籍"輸入" 出現moreOptions  */
@@ -849,8 +742,7 @@ ul a {
 } */
 
 .moreOptions {
-    background-color: transparent;
-    z-index: 101;
-    display: none;
+  background-color: transparent;
+  z-index: 101;
+  display: none;
 }
-

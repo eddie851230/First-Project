@@ -50,18 +50,24 @@ function expandMore() {
 // ---------------------------------------------------------
 // 建立單一函式開啟各別Modal
 const triggers = document.getElementsByClassName("trigger");
+const set = Array.from(triggers);
 const triggerArray = Array.from(triggers).entries();
+// console.log(triggerArray);
 
+//點擊外框
 let wholeModal = document.getElementById("zoommodal");
+//放圖的眶
 let zoomerPic = document.getElementById("id-zoompic");
+//關閉鍵
 const closeButtons = document.getElementById("closeicon");
 
 // 建立迴圈:點選圖會選到對應的modal
 for (let [index, trigger] of triggerArray) {
+  // console.log(trigger);
   const toggleModal = () => {
     wholeModal.classList.toggle("show-modal");
     zoomerPic.src = triggers[index].src;
-    console.log(triggers[index].src);
+    console.log(zoomerPic.src);
 
     // wholeModal.style.display = 'flex';
   };
@@ -72,6 +78,7 @@ for (let [index, trigger] of triggerArray) {
 
 let typingtext = document.getElementsByClassName("typing");
 
+// 游標移入打開
 typingtext[0].onfocus = function () {
   document.getElementsByClassName("moreOptions")[0].style.display = "block";
   // var bob = 0;
@@ -84,7 +91,7 @@ typingtext[0].onfocus = function () {
   //     }
   // }, 1000)
 };
-
+//游標移出關閉
 typingtext[0].onblur = function () {
   document.getElementsByClassName("moreOptions")[0].style.display = "none";
 };
